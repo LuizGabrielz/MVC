@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "aZ817CoGH9zpEXZ4RqihK95jszT7F1+Uy/c6FoZiHZM=",
+  "Hash": "1yNd2MT7TgloI9B8+FTWV13b24PLDOYQZimEdum2fN8=",
   "Source": "LanchesMac",
   "BasePath": "_content/LanchesMac",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\Gabriel\\Documents\\ASP .NET Core MVC\\LanchesMac\\wwwroot\\images\\baleia.jpg",
+      "SourceId": "LanchesMac",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Gabriel\\Documents\\ASP .NET Core MVC\\LanchesMac\\wwwroot\\",
+      "BasePath": "_content/LanchesMac",
+      "RelativePath": "images/baleia.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\baleia.jpg"
     },
     {
       "Identity": "C:\\Users\\Gabriel\\Documents\\ASP .NET Core MVC\\LanchesMac\\wwwroot\\js\\site.js",

@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\Gabriel\\Documents\\ASP .NET Core MVC\\LanchesMac\\wwwroot\\images\\baleia.jpg",
+      "PackagePath": "staticwebassets\\images\\baleia.jpg"
+    },
+    {
       "Id": "C:\\Users\\Gabriel\\Documents\\ASP .NET Core MVC\\LanchesMac\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

@@ -1,0 +1,24 @@
+Populando as tabelas com dados iniciais: Migrations
+- Criar uma nova migração vazia para popular as tabelas
+- Obs: Será criada o arquivo de script contendo os métodos Up() e Down() vazios 
+
+- Incluir no método Up() as instruções INSERT INTO para popular as tabelas
+
+- Incluir no método Down() as instruções DELETE FROM para desfazer a migração
+
+Existe um relacionamento Um-para-Muitos entre as tabelas Categoria e Lanches
+
+1 - Vamos criar duas Migrações
+2- Uma migração para incluir dados na tabela Categorias
+3 - Uma migração para incluir dados na tabela Lanches
+
+1 - Criar uma nova migração para popular a tabela Categorias add-migration PopularCategorias
+
+2 - Incluir no método Up() as instruções Insert Into para popular as tabelas
+
+3 - Incluir no método Down() as instruções Delete From para desfazer a migração
+
+migrationBuilder.Sql("INSERTINTO Categorias(CategoriaNome, Descrição)
+                    Value('Normal','Lanche' feito com igredientes normais')");
+
+Categoriald -> chave primária, Idenity = > Não necessita ser informada

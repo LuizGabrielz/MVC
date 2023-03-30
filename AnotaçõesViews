@@ -1,0 +1,144 @@
+Anotações da View
+
+ViewData - Transfere dados do Controller para a View; é do tipo ViewDataDictionary
+É um dicionário que armazena dados no formato chave/valor
+Exige a conversão de tipos para: verificar valores nulos, obter dados, evitar erros.
+
+//ViewData["Título"] = "Todos os Lanches";
+
+//ViewData["Data"] = DateTime.Now; ====> Controller
+
+// @ViewData["Titulo"]
+// @ViewData["Data"] ====> View
+
+Tempo de vida = Request - Se vc der um Required, vc vai perder os valores de ViewData.
+
+ViewBag - Transfere dados do Controller para a view; é uma propiedade dinamica(dynamic)
+
+É um tipo object que armazena dados no formato chave/valor.
+Não requer a conversão de tipos
+
+//ViewBag.Total = "Total de lanches:";
+//viewBag.TotalLanches = lanches.Count(); ====> Controller
+
+//@ViewBag.Total
+//ViewBag.TotalLanches ====> View
+
+Tempo de vida = Request
+
+TempData - Transfere dados do :Controller para a View, da View para o Controller ou de método Action para outro método Action no mesmo Controlador ou para um Controlador diferente.
+
+É um objeto dicionário do tipo TempDataDictionary que armazena dados no formato chave/valor.
+
+Armazena os dados temporariamente e os remove automaticamente após recuperar um valor.
+
+Exige a conversão de tipos
+
+//TempData["Nome"]="Macoratti"; ====> Controller1
+// @TempData["Nome"] =====> Controller2
+
+@if(TempData.ContainsKey("Nome"))
+{
+    <h1>@TempData["Nome"]; </h1>
+}
+
+ViewModel - Definição
+É um padrão de projeto que permite separar as responsabilidades do modelo de domínio dos modelos que atendem as Views
+
+Representa o conjunto de uma ou mais entidades do Modelo de domínio e de outras informações que serão exibidas em uma View
+
+1. Contém apenas as propiedades que serão representadas na View
+2. Pode possuir regras específicas de validação (Data Annotations)
+3. Pode conter múltiplas entidades ou objetos dos modelo de domínio
+4. Contém a lógica da interface do usuário
+5. Contém somente dados e comportamentos relacionados ás Views
+
+Model1         Model2
+
+- Cliente      - Pedido
+
+    ViewModel
+    (Model1 + Model2)
+     ClientePedidoViewModel  =>>> View
+
+ViewModels são usadas para moldar múltiplas entidades do modelo de domínio 
+em um único objeto oferecendo uma melhor otimização
+
+ViewModel - Utilização
+
+- Gerenciar ou criar listas suspensas para uma entidade
+- Criar Views Mestre-Detalhes
+- Usadas em carrinhos de comprar
+- Usadas em paginação de dados
+- Usadas para implementar o Login e o Registro
+
+Permite isolar e desacoplar o modelo de domínio da lógica de exibição da View
+
+Se existem informações no modelo de domínio que somente serão usadas nas Views crie uma ViewModel com essas informações separando as responsabilidades
+
+ViewModel é diferente de DTO.
+
+Partial View - Definição
+
+É uma view que é renderizada em outra View
+
+São usadas para encapsular a lógica reutilizada nas views permitindo simplificar a complexidade das views
+
+Podem ser usadas em múltiplas views onde é necessário uma lógica similar evitando assim
+duplicidade de código
+
+Principais Usos:
+
+- Renderizar Menus de Navegação;
+- Desenvolver formulários de entrada comuns;
+- Renderizar dados comuns ás Views(reduz a duplicação);
+- Dividir arquivos de marcação grandes em arquivos menores;
+- Possuem a extensão.cshtml;
+- Podem ser retornadas em um método Action (ViewResult);
+- São iguais as views (a nível de código);
+- São renderizadas de forma diferente (não executam o arquivo _ViewStart.cshtml);
+
+- São armazenadas na pasta Views ou na pasta Shared dentro da pasta Views;
+
+- O nome do arquivo de uma partial view começa com um sublinhado(_);
+
+Partial View - Exemplo
+
+-Uma partial view criada em uma pasta especifica das views de um controlador pode ser usada por todas as views dessa pasta.
+
+- Uma partial view criada na pasta Shared (dentro da pasta View) pode ser usada por todas as views existentes na pasta Views
+
+Utilização : Tag Helper
+
+<partial name="_PartialName"/>
+Tag Helper partial renderiza o conteúdo de forma assíncrona
+
+<partialname="~/Pages/_PartialName.cshtml"/>
+Ao definir uma extensão no arquivo da partinal view a Tag Helper referencia uma partial view que deve estar na mesma pasta que o arquivo que chama a partial view.
+
+- Utilização :Html Helper
+
+@await Html.PartialAsync("_PartialName");
+@await Html.RenderPartialAsync("_PartialName");
+
+Usar a Html Helper PartialAsync ou RenderPartialAsync
+
+@await Html.PartialAsync("_PartialName.cshtml");
+@await Html.RenderPartialAsync("_PartialName.csHtml");
+
+Quando a extensão do arquivo está presente, o HTML Helper faz referencia a uma partial view que deve estar na mesma pasta que o arquivo de marcação que chama a partial view.
+
+Não é recomendado usar @Html.Partial nem @Html.RenderPartial que são síncronos.
+
+Acessando dados
+
+<partial name="_PartialName" for ="Model"/>
+
+@await Html.PartialAsync("_PartialName", model);
+@await Html.RenderPartialAsync("_PartialName", model);
+
+Quando uma partial view é instanciada, ela recebe uma cópia do dicionário ViewData do pai.
+
+As atualizações feitas nos dados dentro da partial view não são persistidas na view pai.
+
+As alterações no ViewData em uma partial view são perdidas quando a partial view retorna
