@@ -1,0 +1,3 @@
+Os Controllers geralmente contêm métodos que correspondem a ações específicas, como ler, criar, atualizar ou excluir um recurso, que são mapeados para as rotas da aplicação. Quando uma solicitação é feita a uma rota, o Controlador correspondente é acionado para executar a ação apropriada e retornar uma resposta.
+
+Além disso, o Controlador geralmente é responsável por chamar os serviços ou repositórios para obter ou salvar informações, e fornecer dados para as Views através do Model. O objetivo principal do Controller é manter a separação entre a lógica de negócios e a apresentação de dados para o usuário.

@@ -7,3 +7,4 @@ namespace LanchesMac.Repositories.Interfaces
         IEnumerable<Categoria> Categorias { get; }
     }
 }
+ 
