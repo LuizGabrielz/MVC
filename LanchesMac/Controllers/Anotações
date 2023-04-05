@@ -1,0 +1,8 @@
+Em programação, o termo "Controller" geralmente se refere a uma classe ou componente responsável por gerenciar o fluxo de dados e a lógica de negócios em um aplicativo.
+Essa classe é geralmente responsável por receber e processar solicitações de entrada, interagir com o modelo de dados subjacentes e enviar respostas de saída de volta ao usuário ou sistemas que solicitou a ação.
+
+Em uma arquitetura MVC, o Controller é uma das tres camadas principais e é responsável por gerenciar a interação entre a camada de visualização e a camada de modelo de dados. Ele atua como um intermediário entre essas camadas e é responsável por garantir a lógica de negócios e a interação com o banco de dados sejam realizados corretamente.
+
+Resumindo, o controller é uma parte essencial da arquitetura de um aplicativo de software, responsável por gerenciar o fluxo de dados e a lógica de negócios.
+
+Todas as vezes que for criar um Model, deve criar uma View pra ela.

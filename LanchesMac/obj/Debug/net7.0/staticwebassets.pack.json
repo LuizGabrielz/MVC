@@ -13,8 +13,12 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\Gabriel\\Documents\\ASP .NET Core MVC\\LanchesMac\\wwwroot\\images\\baleia.jpg",
-      "PackagePath": "staticwebassets\\images\\baleia.jpg"
+      "Id": "C:\\Users\\Gabriel\\Documents\\ASP .NET Core MVC\\LanchesMac\\wwwroot\\images\\Full-Cart-icon.png",
+      "PackagePath": "staticwebassets\\images\\Full-Cart-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\Gabriel\\Documents\\ASP .NET Core MVC\\LanchesMac\\wwwroot\\images\\remove.ico",
+      "PackagePath": "staticwebassets\\images\\remove.ico"
     },
     {
       "Id": "C:\\Users\\Gabriel\\Documents\\ASP .NET Core MVC\\LanchesMac\\wwwroot\\js\\site.js",

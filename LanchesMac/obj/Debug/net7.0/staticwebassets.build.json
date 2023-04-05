@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "1yNd2MT7TgloI9B8+FTWV13b24PLDOYQZimEdum2fN8=",
+  "Hash": "vqXQMEZAZS09nly0YeeGe5FAuGxHCjJD91XdQ/iS48k=",
   "Source": "LanchesMac",
   "BasePath": "_content/LanchesMac",
   "Mode": "Default",
@@ -85,12 +85,12 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\Gabriel\\Documents\\ASP .NET Core MVC\\LanchesMac\\wwwroot\\images\\baleia.jpg",
+      "Identity": "C:\\Users\\Gabriel\\Documents\\ASP .NET Core MVC\\LanchesMac\\wwwroot\\images\\Full-Cart-icon.png",
       "SourceId": "LanchesMac",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Gabriel\\Documents\\ASP .NET Core MVC\\LanchesMac\\wwwroot\\",
       "BasePath": "_content/LanchesMac",
-      "RelativePath": "images/baleia.jpg",
+      "RelativePath": "images/Full-Cart-icon.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -99,7 +99,24 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\baleia.jpg"
+      "OriginalItemSpec": "wwwroot\\images\\Full-Cart-icon.png"
+    },
+    {
+      "Identity": "C:\\Users\\Gabriel\\Documents\\ASP .NET Core MVC\\LanchesMac\\wwwroot\\images\\remove.ico",
+      "SourceId": "LanchesMac",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Gabriel\\Documents\\ASP .NET Core MVC\\LanchesMac\\wwwroot\\",
+      "BasePath": "_content/LanchesMac",
+      "RelativePath": "images/remove.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\remove.ico"
     },
     {
       "Identity": "C:\\Users\\Gabriel\\Documents\\ASP .NET Core MVC\\LanchesMac\\wwwroot\\js\\site.js",

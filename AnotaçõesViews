@@ -142,3 +142,52 @@ Quando uma partial view é instanciada, ela recebe uma cópia do dicionário Vie
 As atualizações feitas nos dados dentro da partial view não são persistidas na view pai.
 
 As alterações no ViewData em uma partial view são perdidas quando a partial view retorna
+
+View Components
+
+- Permitem criar funcionalidades semelhante a um método Action de um controlador independente de um controlador. (São semelhantes ás Partial Views)
+
+Consistem em duas partes:
+1. A classe (derivada de ViewComponent)
+2. O resultado que ela retorna (uma view)
+
+Criando uma View Componente (VC)
+1. Uma classe VC pode ser criada :
+
+a) Derivando de ViewComponent
+b) Decorando a classe com o atributo [ViewComponent]
+c) Criando uma classe onde o nome termina com o sufixo ViewComponent
+
+Uma classe VC deve ser pública, não aninhada e não abstrata
+A Classe deve expor o método publico InvokeAsync
+Nome = nome_da_ClasseViewComponent Ex:TesteViewComponent
+
+Criando uma View Component (VC)
+2. O resultado que ela retorna (uma View)
+
+- A view retornada deve ser criada na pasta:
+- Views/Shared/Components/nome_vc
+-Onde nome nome_vc é o nome do prefixo usado na VC criada
+
+Exemplo: Uma View Component criada com o nome TesteViewComponent
+Deverá ter a sua view criada na pasta: /Views/Shared/Components/Teste
+
+Se não for definido um nome especifico para a view o nome padrão é Default.cshtml
+
+Usando uma ViewComponent
+
+1- A partir de um view
+@Component.InvokeAsync("nome_vc", <tipo anonimo com parametros>)
+
+A partir da ASP.Net Core 1.1 podemos invocar uma VC usando uma tag helper :
+<vc:nome_vc parm="...."><>/vc:nome_vc>
+
+Devemos usar a diretiva : @addTagHelper; nomeAssembly
+
+2. A partir de um controlador
+Return ViewComponent("nome_vc", new {param=".."})
+
+- public IActionResult IndexVC()
+{
+    return ViewComponent ("Lista", new {sequencia ="..."});
+}
