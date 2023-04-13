@@ -191,3 +191,7 @@ Return ViewComponent("nome_vc", new {param=".."})
 {
     return ViewComponent ("Lista", new {sequencia ="..."});
 }
+
+A view é responsável por exibir as informações e dados que são gerenciados pelo Controller. O Controller é responsável por processar as requisições do usuário, acessar os dados do Model e atualizar a View com as informações necessárias para que o usuário possa interagir com o sistema.
+
+Assim, a view não aparece o que o Controller tem, mas sim o que o Controller disponibiliza para ela, ou seja, as informações que o controller busca e manipula no Model são posteriormente apresentadas na View para que o usuário possa visualizá-las e interagir com elas. A view é responsável por formatar e apresentar essas informações de forma adequeda e amigável ao usuário.
